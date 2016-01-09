@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.261,=C:\Projects\PW Projects\xorpw\common\xorClient.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.026,C:\Projects\PW Projects\xorpw\common\xorClient.pas=</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.469,=C:\Users\Swoosh\Documents\RAD Studio\Projects\WebModuleUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.405,=C:\Users\Swoosh\Documents\RAD Studio\Projects\FormUnit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.894,=C:\Users\Swoosh\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.119,=C:\Users\Swoosh\Documents\RAD Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.027,C:\Projects\PW Projects\xorpw\dll\src\xorinterface.dproj=C:\Users\Swoosh\Documents\RAD Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.191,=C:\Projects\PW Projects\xorpw\common\xorMembridge.pas</Transaction>
+  </Transactions>
+</BorlandProject>

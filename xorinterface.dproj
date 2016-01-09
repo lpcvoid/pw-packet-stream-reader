@@ -1,0 +1,191 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D71085B2-A969-4D42-9CA6-7063CA4DC30E}</ProjectGuid>
+        <ProjectVersion>14.6</ProjectVersion>
+        <FrameworkType>None</FrameworkType>
+        <MainSource>xorinterface.dpr</MainSource>
+        <Base>True</Base>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <AppType>Library</AppType>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='OSX32' and '$(Base)'=='true') or '$(Base_OSX32)'!=''">
+        <Base_OSX32>true</Base_OSX32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Base)'=='true') or '$(Base_Win32)'!=''">
+        <Base_Win32>true</Base_Win32>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win64' and '$(Base)'=='true') or '$(Base_Win64)'!=''">
+        <Base_Win64>true</Base_Win64>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <Manifest_File>None</Manifest_File>
+        <VerInfo_Locale>1031</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.21;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;LastCompiledTime=2015.05.08 16:15:46</VerInfo_Keys>
+        <DCC_Namespace>System;Xml;Data;Datasnap;Web;Soap;$(DCC_Namespace)</DCC_Namespace>
+        <GenDll>true</GenDll>
+        <DCC_DcuOutput>.\$(Platform)\$(Config)</DCC_DcuOutput>
+        <DCC_ExeOutput>..\..\bin</DCC_ExeOutput>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_OSX32)'!=''">
+        <DCC_UsePackage>fmx;IndySystem;DBXInterBaseDriver;DataSnapCommon;DbxCommonDriver;dbxcds;CustomIPTransport;dsnap;IndyIPServer;fmxase;IndyCore;IndyIPCommon;FmxTeeUI;inetdbxpress;bindcompfmx;rtl;dbrtl;bindcomp;xmlrtl;ibxpress;IndyProtocols;bindcompdbx;FMXTee;bindengine;soaprtl;inet;fmxobj;fmxdae;dbexpress;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win32)'!=''">
+        <DCC_Namespace>Winapi;System.Win;Data.Win;Datasnap.Win;Web.Win;Soap.Win;Xml.Win;Bde;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_UsePackage>dxBarRS18;dxGDIPlusRS18;dxPSCoreRS18;dxPScxPCProdRS18;NxGridRun_dxe4;dxLayoutControlRS18;cxTreeListRS18;dxDockingRS18;atcomp;dxThemeRS18;dxPSdxOCLnkRS18;fmx;IndySystem;NxSheetRun_dxe4;TeeDB;NiceGridBDS2006;inetdbbde;vclib;DBXInterBaseDriver;dxPScxTLLnkRS18;DataSnapCommon;cxTreeListdxBarPopupMenuRS18;cxSchedulerGridRS18;dxtrmdRS18;DbxCommonDriver;vclimg;dbxcds;dxTabbedMDIRS18;MetropolisUILiveTile;vcldb;cxExportRS18;vcldsnap;dxPSLnksRS18;dxPScxPivotGridLnkRS18;dxPScxSSLnkRS18;dxServerModeRS18;CustomIPTransport;vclribbon;dxdborRS18;dsnap;IndyIPServer;fmxase;vcl;IndyCore;cxVerticalGridRS18;IndyIPCommon;CodeSiteExpressPkg;dxPSdxDBOCLnkRS18;FmxTeeUI;cxPivotGridChartRS18;dxADOServerModeRS18;dxPScxExtCommonRS18;inetdbxpress;webdsnap;cxEditorsRS18;cxPageControldxBarPopupMenuRS18;cxSchedulerRS18;cxLibraryRS18;dxSpellCheckerRS18;dxPScxGridLnkRS18;dxPScxVGridLnkRS18;adortl;dxRibbonRS18;NxCommonDsgn_dxe4;NxGridDsgn_dxe4;NxInspectorDsgn_dxe4;dxPSdxDBTVLnkRS18;bindcompfmx;vcldbx;cxBarEditItemRS18;cxPageControlRS18;rtl;dbrtl;bindcomp;Tee;tb2k_d16;xmlrtl;svnui;ibxpress;dxDBXServerModeRS18;IndyProtocols;dxBarExtItemsRS18;dxFlowChartRS18;bindcompdbx;FMXTee;vclactnband;bindengine;soaprtl;TeeUI;bindcompvcl;NxCollectionRun_dxe4;NxDBGridDsgn_dxe4;cxPivotGridRS18;vclie;cxSpreadSheetRS18;dxmdsRS18;dxPsPrVwAdvRS18;vcltouch;dxBarDBNavRS18;dxTileControlRS18;NxInspectorRun_dxe4;dxPSPrVwRibbonRS18;dxPSdxFCLnkRS18;NxCommonRun_dxe4;dxComnRS18;VclSmp;dxBarExtDBItemsRS18;cxGridRS18;dxPScxSchedulerLnkRS18;dxPSDBTeeChartRS18;dxNavBarRS18;NxCollectionDsgn_dxe4;dxdbtrRS18;dxPSTeeChartRS18;inet;dxCoreRS18;fmxobj;dxPScxCommonRS18;SynEdit_RXE4;NxDBGridRun_dxe4;vclx;svn;dxorgcRS18;dxPSdxLCLnkRS18;fmxdae;cxDataRS18;bdertl;dbexpress;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base_Win64)'!=''">
+        <DCC_UsePackage>dxBarRS18;dxGDIPlusRS18;dxPSCoreRS18;NxGridRun_dxe4;dxLayoutControlRS18;cxTreeListRS18;dxDockingRS18;dxThemeRS18;dxPSdxOCLnkRS18;fmx;IndySystem;NxSheetRun_dxe4;TeeDB;vclib;DBXInterBaseDriver;dxPScxTLLnkRS18;DataSnapCommon;cxTreeListdxBarPopupMenuRS18;cxSchedulerGridRS18;dxtrmdRS18;DbxCommonDriver;vclimg;dbxcds;dxTabbedMDIRS18;MetropolisUILiveTile;vcldb;cxExportRS18;vcldsnap;dxPSLnksRS18;dxPScxPivotGridLnkRS18;dxPScxSSLnkRS18;dxServerModeRS18;CustomIPTransport;vclribbon;dxdborRS18;dsnap;IndyIPServer;fmxase;vcl;IndyCore;cxVerticalGridRS18;IndyIPCommon;dxPSdxDBOCLnkRS18;FmxTeeUI;cxPivotGridChartRS18;dxADOServerModeRS18;dxPScxExtCommonRS18;inetdbxpress;webdsnap;cxEditorsRS18;cxPageControldxBarPopupMenuRS18;cxSchedulerRS18;cxLibraryRS18;dxSpellCheckerRS18;dxPScxGridLnkRS18;dxPScxVGridLnkRS18;adortl;dxRibbonRS18;NxCommonDsgn_dxe4;NxGridDsgn_dxe4;NxInspectorDsgn_dxe4;dxPSdxDBTVLnkRS18;bindcompfmx;cxBarEditItemRS18;cxPageControlRS18;rtl;dbrtl;bindcomp;Tee;xmlrtl;ibxpress;dxDBXServerModeRS18;IndyProtocols;dxBarExtItemsRS18;dxFlowChartRS18;bindcompdbx;FMXTee;vclactnband;bindengine;soaprtl;TeeUI;bindcompvcl;NxCollectionRun_dxe4;NxDBGridDsgn_dxe4;cxPivotGridRS18;vclie;cxSpreadSheetRS18;dxmdsRS18;dxPsPrVwAdvRS18;vcltouch;dxBarDBNavRS18;dxTileControlRS18;NxInspectorRun_dxe4;dxPSPrVwRibbonRS18;dxPSdxFCLnkRS18;NxCommonRun_dxe4;dxComnRS18;VclSmp;dxBarExtDBItemsRS18;cxGridRS18;dxPScxSchedulerLnkRS18;dxPSDBTeeChartRS18;dxNavBarRS18;NxCollectionDsgn_dxe4;dxdbtrRS18;dxPSTeeChartRS18;inet;dxCoreRS18;fmxobj;dxPScxCommonRS18;SynEdit_RXE4;NxDBGridRun_dxe4;vclx;dxorgcRS18;dxPSdxLCLnkRS18;fmxdae;cxDataRS18;dbexpress;IndyIPClient;$(DCC_UsePackage)</DCC_UsePackage>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+        <DCC_DebugDCUs>true</DCC_DebugDCUs>
+        <DCC_Optimize>false</DCC_Optimize>
+        <DCC_GenerateStackFrames>true</DCC_GenerateStackFrames>
+        <DCC_DebugInfoInExe>true</DCC_DebugInfoInExe>
+        <DCC_RemoteDebug>true</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <VerInfo_IncludeVerInfo>true</VerInfo_IncludeVerInfo>
+        <VerInfo_Locale>1033</VerInfo_Locale>
+        <Manifest_File>None</Manifest_File>
+        <VerInfo_Build>28</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.28;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;LastCompiledTime=2015.05.16 13:52:29</VerInfo_Keys>
+        <DCC_RemoteDebug>false</DCC_RemoteDebug>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>false</DCC_DebugInformation>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <VerInfo_Build>67</VerInfo_Build>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.67;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=;LastCompiledTime=2015.04.25 18:20:32</VerInfo_Keys>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="..\..\common\xorMembridge.pas"/>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">False</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">28</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1031</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.28</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                    <VersionInfoKeys Name="CFBundleName"/>
+                    <VersionInfoKeys Name="CFBundleDisplayName"/>
+                    <VersionInfoKeys Name="UIDeviceFamily"/>
+                    <VersionInfoKeys Name="CFBundleIdentifier"/>
+                    <VersionInfoKeys Name="CFBundleVersion"/>
+                    <VersionInfoKeys Name="CFBundlePackageType"/>
+                    <VersionInfoKeys Name="CFBundleSignature"/>
+                    <VersionInfoKeys Name="CFBundleAllowMixedLocalizations"/>
+                    <VersionInfoKeys Name="UISupportedInterfaceOrientations"/>
+                    <VersionInfoKeys Name="CFBundleExecutable"/>
+                    <VersionInfoKeys Name="CFBundleResourceSpecification"/>
+                    <VersionInfoKeys Name="LSRequiresIPhoneOS"/>
+                    <VersionInfoKeys Name="CFBundleInfoDictionaryVersion"/>
+                    <VersionInfoKeys Name="CFBundleDevelopmentRegion"/>
+                    <VersionInfoKeys Name="LastCompiledTime">2015.05.16 13:52:29</VersionInfoKeys>
+                </VersionInfoKeys>
+                <Source>
+                    <Source Name="MainSource">xorinterface.dpr</Source>
+                </Source>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k180.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp180.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\RemObjects Software\Everwood\Bin\RemObjects_Everwood_D18.bpl">File C:\Program Files (x86)\RemObjects Software\Everwood\Bin\RemObjects_Everwood_D18.bpl not found</Excluded_Packages>
+                    <Excluded_Packages Name="C:\Program Files (x86)\RemObjects Software\Pascal Script for Delphi\Dcu\D18\win32\PascalScript_Core_D18.bpl">File C:\Program Files (x86)\RemObjects Software\Pascal Script for Delphi\Dcu\D18\win32\PascalScript_Core_D18.bpl not found</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Deployment/>
+            <Platforms>
+                <Platform value="OSX32">False</Platform>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Project="$(BDS)\Bin\CodeGear.Delphi.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')"/>
+    <Import Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj" Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')"/>
+</Project>
